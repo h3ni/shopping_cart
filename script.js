@@ -1,16 +1,24 @@
-var plus = document.getElementById("plus");
-var minus = document.getElementById("minus");
-var qt = document.getElementById("qt");
-var sum = document.getElementById("sum");
+var btnplus = document.getElementById("btn_plus");
+var btnminus = document.getElementById("btn_minus");
+var sum = document.getElementById("priceTotal");
 
-plus.addEventListener("click", function () {
-  qt.innerHTML = +qt.innerHTML + 1;
-  sum.innerHTML = +sum.innerHTML + 90;
-});
-
-minus.addEventListener("click", function () {
-  if (qt.innerHTML > 0) {
-    qt.innerHTML = +qt.innerHTML - 1;
-    sum.innerHTML = +sum.innerHTML - 90;
-  }
-});
+for (btn of btnPlus) {
+  btn.addEventListener("click", function addQuantity() {
+    var name = btn.getAttribute("name");
+    var qty = document.getElementById(name + "_qty");
+    var price = document.getElementById(name + "_price");
+    qty.innerHTML = +qty.innerHTML + 1;
+    TotalPrice.innerHTML = +TotalPrice.innerHTML + +price.innerHTML;
+  });
+}
+for (btn of btnMinus) {
+  btn.addEventListener("click", function MinusQuantity() {
+    var name = btn.getAttribute("name");
+    var qty = document.getElementById(name + "_qty");
+    var price = document.getElementById(name + "_price");
+    if (qty.innerHTML > 0) {
+      qty.innerHTML = +qty.innerHTML - 1;
+      TotalPrice.innerHTML = +TotalPrice.innerHTML - +price.innerHTML;
+    }
+  });
+}

@@ -5,7 +5,7 @@ body {
   align-items: center;
   background-color: #dee2c5;
 }
-.first-item {
+.items {
   width: 750px;
   height: 423px;
   margin: 80px auto;
@@ -19,12 +19,17 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-
+.item {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
 img {
   width: 300px;
   height: 200px;
 }
-#minus {
+.btn_plus {
   align-items: center;
   background: #ffffff;
   border: 0 solid #e2e8f0;
@@ -49,7 +54,7 @@ img {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-#plus {
+.btn_minus {
   align-items: center;
   background: #ffffff;
   border: 0 solid #e2e8f0;
